@@ -1,0 +1,43 @@
+
+@import '_variables';
+
+#input-from {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+input {
+  width: 10%;
+  border: none;
+  border-bottom: $input-border-bottom;
+  color: $theme-header;
+  font-size: 20px;
+  text-align: center;
+}
+
+#today {
+  margin: auto;
+  width: 70%;
+  font-size: 30px;
+  text-align: center;
+  border: $input-border-bottom;
+  padding: 5%;
+}
+
+#choice {
+  width: 150px;
+  height: 150px;
+}
+
+
+#morning {
+  float: left;
+}
+
+#evening {
+  float: right;
+}
+
+#content {
+  margin: 3%
+}
