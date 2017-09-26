@@ -3,7 +3,7 @@ import {dispatcher} from 'js/dispatcher';
 class WeatherActions {
 	//actions passes off data to the store
 	initialize(){
-		return null
+//Not using this class for now
 	}
 
 }

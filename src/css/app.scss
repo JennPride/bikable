@@ -41,3 +41,12 @@ input {
 #content {
   margin: 3%
 }
+
+#inputs {
+  list-style: none;
+}
+
+#inputs li {
+  display: inline;
+  margin: 3%;
+}
