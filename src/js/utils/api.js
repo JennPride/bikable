@@ -12,9 +12,11 @@ let fetchApiData = (appId) => {
 */
 export let getApiData = (apiId) => {
     let invocation = fetchApiData(apiId);
-    let resp = invocation.responseText;
-    let data = JSON.parse(resp);
+    var data = JSON.parse(invocation.responseText);
     let hours = data.hourly.data;
+
+    //Assuming the usual 9-6 commute
+
     let morningTemp = hours[9].temperature;
     let eveningTemp = hours[18].temperature;
     let morningPrec = hours[9].precipProbability;

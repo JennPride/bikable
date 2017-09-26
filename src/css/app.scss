@@ -1,9 +1,15 @@
 
 @import '_variables';
 
+
+@media only screen and (max-width: 700px) {
+  #today h2 { font-size: 20px; }
+  #today h3 { font-size: 15px; }
+}
+
 #input-from {
   text-align: center;
-  margin-bottom: 5%;
+  margin-bottom: $spacing;
 }
 
 input {
@@ -16,17 +22,18 @@ input {
 }
 
 #today {
+  box-sizing: content-box;
   margin: auto;
   width: 70%;
-  font-size: 30px;
   text-align: center;
   border: $input-border-bottom;
-  padding: 5%;
+  padding: 7%;
+  min-width: 400px;
 }
 
 #choice {
-  width: 150px;
-  height: 150px;
+  width: 30%;
+  height: 30%;
 }
 
 
@@ -39,7 +46,7 @@ input {
 }
 
 #content {
-  margin: 3%
+  margin: $spacing
 }
 
 #inputs {
@@ -48,5 +55,5 @@ input {
 
 #inputs li {
   display: inline;
-  margin: 3%;
+  margin: $spacing;
 }

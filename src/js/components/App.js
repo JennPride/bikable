@@ -6,6 +6,10 @@ import Weather from 'js/components/weather/Weather';
 
 export default class App extends Component {
 
+
+//Holding the user input variables in the App state to account for potential
+//use in components other than weather
+
   constructor(props) {
     super(props);
     this.state = {
@@ -19,9 +23,10 @@ export default class App extends Component {
 
   displayName: 'App';
 
+//Using generic handle change state manager to update based on which field
+//is passed
+
   handleChange(newProp, propName) {
-      console.log(newProp, propName)
-      console.log("SETTING");
       if(propName == "maxTemp") {
         this.setState({
          maxTemp : newProp
@@ -35,8 +40,6 @@ export default class App extends Component {
           rain: newProp
         })
       }
-
-    console.log(this.state);
   }
 
   render () {
