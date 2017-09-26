@@ -12,9 +12,9 @@ let fetchApiData = (appId) => {
 */
 export let getApiData = (apiId) => {
     let invocation = fetchApiData(apiId);
-    var resp = invocation.responseText;
-    var data = JSON.parse(resp);
-    var hours = data.hourly.data;
+    let resp = invocation.responseText;
+    let data = JSON.parse(resp);
+    let hours = data.hourly.data;
     let morningTemp = hours[9].temperature;
     let eveningTemp = hours[18].temperature;
     let morningPrec = hours[9].precipProbability;

@@ -9,33 +9,41 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      temp: 100,
+      minTemp: 0,
+      maxTemp: 100,
       rain: 20,
       title: "Bikeable"
     };
-    this.handlePerChange = this.handlePerChange.bind(this);
-    this.handleTempChange = this.handleTempChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   displayName: 'App';
 
-  handleTempChange(newTemp) {
-    this.setState({
-    temp : newTemp
-  });
-}
+  handleChange(newProp, propName) {
+      console.log(newProp, propName)
+      console.log("SETTING");
+      if(propName == "maxTemp") {
+        this.setState({
+         maxTemp : newProp
+      });
+    } else if (propName == "minTemp") {
+      this.setState({
+        minTemp: newProp
+      })
+    } else if (propName == "rain") {
+        this.setState({
+          rain: newProp
+        })
+      }
 
-handlePerChange(newPer) {
-  this.setState({
-    rain: newPer
-  })
-}
+    console.log(this.state);
+  }
 
   render () {
     return (
         <div className='root'>
           <Header title={this.state.title} />
-          <Weather temp={this.state.temp} rain={this.state.rain} onPerChange={this.handlePerChange} onTempChange={this.handleTempChange}/>
+          <Weather minTemp={this.state.minTemp} maxTemp={this.state.maxTemp} rain={this.state.rain} onPropChange={this.handleChange}/>
         </div>
 
     );
